@@ -374,7 +374,7 @@ class Order extends PayPalResourceModel
         ArgumentValidator::validate($orderId, 'orderId');
         $payLoad = "";
         $json = self::executeCall(
-            "/v1/payments/orders/$orderId",
+            "/v1/checkout/orders/$orderId",
             "GET",
             $payLoad,
             null,
